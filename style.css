@@ -1,0 +1,27 @@
+/* this is a css comment*/
+body {
+  background-image: url("assets/backgroundmain.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+  background-attachment:scroll;
+}
+
+#navbar {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+  flex:content;
+  background-color: rgba(226, 222, 216, 0.315); 
+  padding: 20px;
+}
+
+p.embed {
+  border-left-style:  solid;
+  border-color: beige;
+  background-color: rgba(245, 245, 220, 0.329);
+  margin: 15px;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+</head>
+
+<body>
+    <section>
+        <h1>different input forms</h1>
+        <br>
+        <form>
+        <input type="text"> this is text input<br>
+        <input type="radio"> radio input<br>
+        <input type="checkbox"> this is a checkbox<br>
+        <input type="submit"> shows a submit button<br>
+        <input type="button"> literally a button <br>
+    </form>
+    <hr id="hr1">
+    <h1>text fields</h1>
+    <br>
+    <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" autocomplete="on" name="rick">
+    <label for="fname">First Name: </label><br>
+    <input type="text" id="fname" name="fname"> <br>
+    <label for="lname">Last Name: </label><br>
+    <input type="text" id="lname" name="lname"> <br>
+    <input type="submit" value="click">
+    <input type="reset">
+    </form>
+    <hr id="hr2">
+    <h1>
+        form elements
+    </h1>
+    <br>
+    <select id="number" name="numbers" size="3" multiple>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6" selected>6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+
+
+    <br>
+
+
+    <button type="button" onclick="alert('ha ha! sucker')"> Click me!</button>
+    <br>
+    <br>
+    
+    <form name="with_fieldset">
+        <fieldset>
+            <legend> Just answer 🔫</legend>
+            <br>
+            <label for="fname">First Name: </label><br>
+            <input type="text" id="fname" name="fname"> <br>
+            <label for="lname">Last Name: </label><br>
+            <input type="text" id="lname" name="lname"> <br>
+            <input type="submit" value="click">
+        </fieldset>
+    </form>
+
+    <hr>
+    <hr>
+
+    <form name="he he" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    0
+    <input type="range" id="a" name="a" value="50">
+    100 + 
+    <input type="number" id="b" name="b" value="50">
+    =
+    <output name="x" for="a b"></output>
+    <br>
+    <input type="submit">
+    </form>
+    <hr>
+    <hr>
+    <h2>Color picker?</h2>
+    <br>
+    <fieldset>
+    <legend><label for="color_picker">Select yo Color:</label></legend>
+    <input type="color" id="colour_picker"><br>
+    <input type="file" id="myfile" multiple>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Read only areas</legend>
+        <label for="readonlyfield">Name</label><br>
+        <input type="text", value="ass" id="readonlyfield" disabled>
+    </fieldset>
+    <br>
+    <hr>
+    pattern field attribute with placeholder
+    <br>
+    <label for="ccdst"> CCDSD </label>
+    <input type="text" id="ccdst" name="ccdsd" placeholder="Abcde@1234" pattern="[A]{1}[a-z]{4}[@]{1}[1-10]{4}" required>
+    <input type="submit">
+    </section>
+<br>
+    <hr>
+    <br>
+        <!-- Canvas -->
+    <section>
+        HTML canvas is used to draw graphics using js
+        base markup looks like this: <br>
+        &lt canvas  id="myCanvas" width="200" height="100" style="border:1px solid #000000;" &gt &lt/canvas &gt<br>
+        OUTPUT:<br>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <br><br>
+        <h1>SVG</h1>
+        <br>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke width="4" fill="yellow">
+        </svg>
+    </section>
+    <hr>
+    <br>
+    <br>
+    <!-- media -->
+
+    <section>
+        <h1> videooooo</h1>
+        <br>
+        <video width="320" height="240" controls autoplay>
+            <source src="movie.mp4" type="video/mp4">
+            video bitch          
+        </video>
+    </section>
+</body>
+
+</html>
