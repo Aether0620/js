@@ -5,6 +5,7 @@ body {
   background-position: right top;
   margin-right: 200px;
   background-attachment:scroll;
+  color: azure;
 }
 
 #navbar {
@@ -73,4 +74,18 @@ a.nav:active {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+
+/* for hr */
+.lines {
+  width: 200%;
+  height: 16px;
+  background-color: white;
+}
+
+th {
+  background-color:darkslategray;
+  text-align: left;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
