@@ -1,0 +1,50 @@
+body {
+    background-color: aliceblue;
+}
+
+.navbar {
+    background-color: rgb(44, 42, 46);
+    width: 100%;
+    height: 40px;
+    margin:0px;
+    position: sticky;
+}
+.nav_content {
+    background-color: inherit;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+#clearfix {
+    overflow: auto;
+}
+
+a:link {
+    background-color: inherit;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:visited {
+    background-color: inherit;
+    color: white;
+}
+
+a:hover {
+    background-color: rgb(85, 84, 84);
+    color: white;
+}
+
+    a:active {
+    background-color: rgb(85, 84, 84);
+    color: white;
+}
+
+.headerimage {
+    max-width:100%;
+    position:relative;
+}
