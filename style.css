@@ -1,91 +1,31 @@
 /* this is a css comment*/
 body {
-  background-image: url("assets/backgroundmain.jpg");
-  background-repeat: no-repeat;
-  background-position: right top;
-  margin-right: 200px;
-  background-attachment:scroll;
-  color: azure;
+  background-color: rgb(230, 227, 195);
 }
 
-#navbar {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 24px;
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(142, 202, 204);
-
-
-
+img {
+  float:right;
+  width:50%;
+  height:50%;
+  margin-left: 20px;
 }
 
-p.embed {
-  color: rgb(34, 25, 16);
-  width: 100%;
-  border-left-style:  solid;
-  border-color: beige;
-  border-radius: 8px;
-  background-color: rgba(245, 245, 220, 0.329);
-  margin: 0px;
-  padding: 8px;
-  font-size: 20px;
-  font-stretch: expanded;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  vertical-align: super;
+.floatdivexample1 {
+  border: 5px solid saddlebrown;
+  background-color: rgb(252, 249, 245);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
 }
 
-.navelement {
-  padding-left: 20px;
-  padding-right: 20px;
+#clearfix {
+  overflow: auto;
 }
 
-a.nav:link {
-  background-color: rgb(142, 202, 204);
-  color: rgb(10, 6, 32);
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a.nav:visited {
-  background-color: rgb(142, 202, 204);
-  color: rgb(40, 33, 77);
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a.nav:hover {
-  background-color: rgb(88, 175, 179);
-  color: rgb(10, 6, 32);
-  padding: 20px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a.nav:active {
-  background-color: rgb(142, 202, 204);
-  color: rgb(10, 6, 32);
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* for hr */
-.lines {
-  width: 200%;
-  height: 16px;
-  background-color: white;
-}
-
-th {
-  background-color:darkslategray;
-  text-align: left;
-  padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.box {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding: 30px;
+  background-color: rgb(58, 57, 55);
 }

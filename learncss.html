@@ -1,94 +1,58 @@
-<!--base code-->
+<!DOCTYPE html>
 <html>
-<title>learning css</title>
+
+<!--head, links and meta tags-->
 <head>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
 </head>
+
+<!--Title-->
+<title>
+learning css
+</title>
+
+<!--Starting body-->
 <body>
-<nav>
-    <table id="navbar">
-        <tr>
-            <td>
-            <a href="https://www.youtube.com/" class="nav">Alpha</a></td>
-            <td><a href="https://www.youtube.com/" class="nav">Beta</a></td>
-            <td><a href="https://www.youtube.com/" class="nav">Gamma</a></td>
-            <td><a href="https://www.youtube.com/" class="nav"> phi</a></td>
-        </tr>
-    </table>
-</nav>
-<aside class="leftnavpane">
-    <table>
-    <tr>
-    <td>uno</td></tr>
-    <tr>
-    <td>duo</td></tr>
-    <tr>
-    <td>tri</td></tr>
-    </table>
-</aside>
-
-<p class="embed">
-    <img src="assets/mangekyo.ico" id="chatimg"> &nbsp Some text.</p>
-    
-    <div>hi
-<i class="fas fa-cloud"></i>
-<i class="fas fa-heart"></i>
-<i class="fas fa-car"></i>
-<i class="fas fa-file"></i>
-<i class="fas fa-bars"></i>
-
+    <section>
+    <!--float div-->
+    <div class="floatdivexample1">
+    <h2>Float examples</h2>
+    <br>
+    <p>
+    <img src="/assets/coin.png" alt="3d coin bitch">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+    nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+    Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue 
+    ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis 
+    urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper 
+    ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui 
+    eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar 
+    nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
     </div>
-
-    <br><br><hr class="lines">
-    <br><br>
-    <table>
-        <tr>
-            <th>company</th>
-            <th>Contact</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Berglunds snabbköp</td>
-            <td>Christina Berglund</td>
-            <td>Sweden</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
-        <tr>
-            <td>Ernst Handel</td>
-            <td>Roland Mendel</td>
-            <td>Austria</td>
-        </tr>
-        <tr>
-            <td>Island Trading</td>
-            <td>Helen Bennett</td>
-            <td>UK</td>
-        </tr>
-        <tr>
-            <td>Königlich Essen</td>
-            <td>Philip Cramer</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Laughing Bacchus Winecellars</td>
-            <td>Yoshi Tannamuri</td>
-            <td>Canada</td>
-        </tr>
-        <tr>
-            <td>Magazzini Alimentari Riuniti</td>
-            <td>Giovanni Rovelli</td>
-            <td>Italy</td>
-        </tr>
-    </table>
+    <br><hr><br>
+    <!--
+        CLEARFIX HACK
+    -->
+    <div class="floatdivexample1" id="clearfix">
+    <p>
+    <img src="/assets/coin.png" alt="3d coin bitch">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+    nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+    </p>
+    </div>
+    <br><hr><br>
+    <!-- 
+        FLOAT TYPES  AND GRIDS ETC...
+    -->
+    <div id="clearfix">
+        <div class="box"> b1</div>
+        <div class="box"> b1</div>
+        <div class="box"> b1</div>
+        <div class="box"> b1</div>
+    </div>
+    </section>
 </body>
 </html>

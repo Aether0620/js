@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Chat container */
+#chat-container {
+  width: 400px;
+  height: 600px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat history */
+#chat-history {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Chat message */
+.chat-message {
+  background-color: #f1f0f0;
+  margin: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 80%;
+}
+
+/* Chat message from ChatGPT */
+.chat-message.gpt {
+  background-color: #00b8ff;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Input container */
+#input-container {
+  display: flex;
+  flex-direction: row;
+  margin: 8px;
+}
+
+/* Message input */
+#message-input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+}
+
+/* Send button */
+#send-button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #00b8ff;
+  color: white;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+  </style>
+  <title>Chat with ChatGPT</title>
+</head>
+<body>
+  <div id="chat-container">
+    <ul id="chat-history"></ul>
+    <div id="input-container">
+      <input id="message-input" type="text" placeholder="Type your message here">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const API_KEY = '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';
+const chatHistory = document.getElementById('chat-history');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+
+function addChatMessage(message, isFromGPT) {
+  const chatMessage = document.createElement('li');
+  chatMessage.innerText = message;
+  chatMessage.classList.add('chat-message');
+  if (isFromGPT) {
+    chatMessage.classList.add('gpt');
+  }
+  chatHistory.appendChild(chatMessage);
+  chatHistory.scrollTop = chatHistory.scrollHeight;
+}
+
+async function getGPTResponse(prompt) {
+  const requestBody = {
+    prompt: prompt,
+    max_tokens: 2000,
+    temperature: 0.7,
+    model: "text-davinci-003"
+  };
+
+  const response = await fetch("https://api.openai.com/v1/engines/text-davinci-003/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${API_KEY}`
+    },
+    body: JSON.stringify(requestBody)
+  });
+
+  const responseBody = await response.json();
+  const {choices} = responseBody.choices[0];
+  const text = choices.map(choice => choice.text).join('');
+  
+  return text.trim();
+}
+
+
+async function sendMessage() {
+  const message = messageInput.value;
+  addChatMessage(message, false);
+  messageInput.value = '';
+  const gptResponse = await getGPTResponse(message);
+  addChatMessage(gptResponse, true);
+}
+
+sendButton.addEventListener('click', sendMessage);
+
+messageInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+  </script>
+</body>
+</html>
