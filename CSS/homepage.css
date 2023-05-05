@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(216, 227, 231);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    margin:0px;
+}
+
+.header {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background:transparent;
+    z-index: 0;
+}
+
+
+div.header img {
+    background-image: url(../assets/header.jpg);
+    height: 300px;
+    width: 100%;
+}
+div.header div{
+    top: 0px
+}
+div.header h1 {
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    text-align: center;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    padding: 14px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+li.dropdown {
+    display: inline-block
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align:left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.left-column {
+    float: left;
+    width: 70%;
+}
+
+.right-column {
+    float: left;
+    width: 30%;
+}
+
+
+.rows::after {
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.cards {
+    background-color: white;
+    min-height: 200px;
+    border: 1px solid #9b9b9b;
+    border-left: 4px solid #444;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 12px;
+    margin: 18px 12px;
+}
+
+.spacer {
+    height: 10px;
+    width: 100%;
+    background-color: transparent;
+    padding: 0px;
+    margin: 1px;
+}
+
+.card-title {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-subtitle {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-style: oblique;
+}
+
+.card-content {
+    text-align: left;
+}
+
+.footer {
+    padding: 0px 0px;
+    background-color: #111;
+    bottom: 0px;
+    height: 200px;
+    width: 100%;
+}
+
+div[class=footer] p {
+    padding: 20px 10px;
+    color: #9b9b9b;
+    font-style: oblique;
+    font-weight: 100;
+    overflow: auto;
+}
+
+/*responsive layout*/
+@media screen and (max-width: 800px) {
+    .left-column, .right-column {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .dropbtn {
+        float: none;
+        width: 100%;   
+    }
+}
