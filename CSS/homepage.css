@@ -1,27 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     background-color: rgb(216, 227, 231);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     margin:0px;
+    counter-reset: titlecounter;
 }
 
 .header {
     position: relative;
-    height: 300px;
+    height: 400px;
     width: 100%;
-    background:transparent;
+    background:#000;
     z-index: 0;
 }
 
 
 div.header img {
     background-image: url(../assets/header.jpg);
-    height: 300px;
+    height: inherit;
     width: 100%;
+}
+
+div.header img:hover {
+    opacity: 0.5;
+    transition-duration: 0.2s;
 }
 div.header div{
     top: 0px
@@ -82,7 +90,13 @@ li.dropdown {
     text-align:left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+    transform: scale(1.02, 1.02);
+    animation-duration: 0.2s;
+    font-weight: 700;
+    background-color: #f1f1f1;
+}
+
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -116,6 +130,11 @@ li.dropdown {
     margin: 18px 12px;
 }
 
+.cards:hover {
+    transform: scale(1.02, 1.02);
+    animation-duration: 0.2s;
+}
+
 .spacer {
     height: 10px;
     width: 100%;
@@ -132,6 +151,11 @@ li.dropdown {
     color: #333;
     padding: 0px;
     margin: 0px;
+}
+
+.card-title::before {
+    counter-increment: titlecounter;
+    content: counter(titlecounter) ". ";
 }
 
 .card-subtitle {
